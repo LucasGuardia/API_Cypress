@@ -22,6 +22,6 @@ In the project root folder run the command:
 npm run cypress:run
 ```
 
-### Reporters ###
+### Reports ###
 
 - Reports HTML and json in directory: ```mochawesome-report```
