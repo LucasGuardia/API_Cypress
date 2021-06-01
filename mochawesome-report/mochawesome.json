@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-06-01T16:26:57.324Z",
+    "end": "2021-06-01T16:27:00.598Z",
+    "duration": 3274,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "345c6150-5442-4fcd-87a9-7425618e4ac3",
+      "title": "",
+      "fullFile": "cypress/integration/services/Atividades/tests/Atividades.spec.js",
+      "file": "cypress/integration/services/Atividades/tests/Atividades.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d16b38f4-dead-4101-bdce-27979e55150b",
+          "title": "Validar API de Atividades",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Consultar atividades cadastradas",
+              "fullTitle": "Validar API de Atividades Consultar atividades cadastradas",
+              "timedOut": null,
+              "duration": 1161,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_requests.default.getAllActivities().should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.statusText).to.eq('OK');\n  expect(response.body).to.be.not.null;\n});",
+              "err": {},
+              "uuid": "630af812-d9a3-4e65-981c-629c48230f87",
+              "parentUUID": "d16b38f4-dead-4101-bdce-27979e55150b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Consultar uma atividade cadastrada",
+              "fullTitle": "Validar API de Atividades Consultar uma atividade cadastrada",
+              "timedOut": null,
+              "duration": 439,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_requests.default.getAllActivities().then(resGetActivities => {\n  _requests.default.getActivitie(resGetActivities.body[0].id).should(response => {\n    expect(response.status).to.eq(200);\n    expect(response.statusText).to.eq('OK');\n    expect(response.body).to.be.not.null;\n  });\n});",
+              "err": {},
+              "uuid": "1383bf38-ada6-4064-bc95-bcb6aec0f555",
+              "parentUUID": "d16b38f4-dead-4101-bdce-27979e55150b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cadastrar uma nova atividade",
+              "fullTitle": "Validar API de Atividades Cadastrar uma nova atividade",
+              "timedOut": null,
+              "duration": 233,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_requests.default.postActivities().should(response => {\n  expect(response.status).to.eq(200);\n  expect(response.statusText).to.eq('OK');\n  expect(response.body.title).to.eq('Caminhar na Chuva');\n});",
+              "err": {},
+              "uuid": "ec983b46-cdcd-4353-be48-95c577dda815",
+              "parentUUID": "d16b38f4-dead-4101-bdce-27979e55150b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deletar uma nova atividade",
+              "fullTitle": "Validar API de Atividades Deletar uma nova atividade",
+              "timedOut": null,
+              "duration": 438,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_requests.default.postActivities().then(resPostActivitie => {\n  _requests.default.deleteActivitie(resPostActivitie.body.id).should(response => {\n    expect(response.status).to.eq(200);\n    expect(response.statusText).to.eq('OK');\n  });\n});",
+              "err": {},
+              "uuid": "2cb6c0a3-e693-41ff-9fcd-9d16fead94e4",
+              "parentUUID": "d16b38f4-dead-4101-bdce-27979e55150b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Atualizar uma atividade",
+              "fullTitle": "Validar API de Atividades Atualizar uma atividade",
+              "timedOut": null,
+              "duration": 438,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_requests.default.postActivities().then(resPostActivitie => {\n  _requests.default.putActivitie(resPostActivitie.body.id).should(response => {\n    expect(response.status).to.eq(200);\n    expect(response.statusText).to.eq('OK');\n    expect(response.body.id).not.to.eq(resPostActivitie.body.id);\n  });\n});",
+              "err": {},
+              "uuid": "49a58cef-815d-499b-85f4-de4add8be3ba",
+              "parentUUID": "d16b38f4-dead-4101-bdce-27979e55150b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Consultar uma atividade inexistente",
+              "fullTitle": "Validar API de Atividades Consultar uma atividade inexistente",
+              "timedOut": null,
+              "duration": 220,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_requests.default.getActivitie(99).should(response => {\n  expect(response.status).to.eq(404);\n  expect(response.body.title).to.eq('Not Found');\n});",
+              "err": {},
+              "uuid": "8c644bb1-b594-4a66-9d49-4157435fd801",
+              "parentUUID": "d16b38f4-dead-4101-bdce-27979e55150b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar Bad request ao Deletar uma atividade",
+              "fullTitle": "Validar API de Atividades Validar Bad request ao Deletar uma atividade",
+              "timedOut": null,
+              "duration": 218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_requests.default.deleteActivitie('invalid').should(response => {\n  expect(response.status).to.eq(400);\n  expect(response.statusText).to.eq('Bad Request');\n});",
+              "err": {},
+              "uuid": "ebbe7be6-a84a-426b-a229-a0c7e834faac",
+              "parentUUID": "d16b38f4-dead-4101-bdce-27979e55150b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "630af812-d9a3-4e65-981c-629c48230f87",
+            "1383bf38-ada6-4064-bc95-bcb6aec0f555",
+            "ec983b46-cdcd-4353-be48-95c577dda815",
+            "2cb6c0a3-e693-41ff-9fcd-9d16fead94e4",
+            "49a58cef-815d-499b-85f4-de4add8be3ba",
+            "8c644bb1-b594-4a66-9d49-4157435fd801",
+            "ebbe7be6-a84a-426b-a229-a0c7e834faac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3147,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": true,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

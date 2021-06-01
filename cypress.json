@@ -1,0 +1,8 @@
+{
+    "baseUrl": "https://fakerestapi.azurewebsites.net/api/v1/",
+    "video": false,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    }
+}
